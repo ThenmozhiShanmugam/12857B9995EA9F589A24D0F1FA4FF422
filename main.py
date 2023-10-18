@@ -1,9 +1,12 @@
-def factorial(n):
-    if n == 0 or n == 1:
-        return 1
-    else:
-        return n * factorial(n - 1)
+def linear_search_product(product_list, target_product):
+  indices = []
+  for i, product in enumerate(product_list):
+      if product == target_product:
+          indices.append(i)
+  return indices
 
-number = int(input("Enter a number: "))
-result = factorial(number)
-print(f"The factorial of {number} is {result}")
+# Example usage:
+products = ["apple", "banana", "apple", "orange", "apple"]
+target = "apple"
+result = linear_search_product(products, target)
+print(result)  
